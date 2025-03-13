@@ -1,0 +1,74 @@
+{
+    "name": "andreagroferreira/laravel-webhook-owlery",
+    "description": "A professional-grade webhook management system for Laravel applications",
+    "keywords": ["laravel", "webhook", "events", "api", "integrations", "callbacks", "owlery"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "André Ferreira",
+            "email": "andre.ferreira@wizardingcode.io"
+        }
+    ],
+    "require": {
+        "php": "^8.1|^8.2|^8.3|^8.4",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "illuminate/http": "^10.0|^11.0|^12.0",
+        "illuminate/database": "^10.0|^11.0|^12.0",
+        "illuminate/queue": "^10.0|^11.0|^12.0",
+        "illuminate/redis": "^10.0|^11.0|^12.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "spatie/laravel-package-tools": "^1.9",
+        "ramsey/uuid": "^4.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^10.0|^11.0",
+        "mockery/mockery": "^1.4",
+        "pestphp/pest": "^2.0",
+        "pestphp/pest-plugin-laravel": "^2.0",
+        "laravel/pint": "^1.0",
+        "spatie/laravel-ray": "^1.24",
+        "phpstan/phpstan": "^1.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "WizardingCode\\WebhookOwlery\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WizardingCode\\WebhookOwlery\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WizardingCode\\WebhookOwlery\\WebhookOwleryServiceProvider"
+            ],
+            "aliases": {
+                "Owlery": "WizardingCode\\WebhookOwlery\\Facades\\Owlery",
+                "WebhookReceiver": "WizardingCode\\WebhookOwlery\\Facades\\WebhookReceiver",
+                "WebhookDispatcher": "WizardingCode\\WebhookOwlery\\Facades\\WebhookDispatcher"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint",
+        "analyse": "vendor/bin/phpstan analyse",
+        "check-style": "vendor/bin/pint --test",
+        "release": [
+            "@test",
+            "@check-style"
+        ]
+    }
+}

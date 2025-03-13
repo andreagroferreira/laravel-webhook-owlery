@@ -1,0 +1,76 @@
+{
+    "preset": "laravel",
+    "rules": {
+        "align_multiline_comment": true,
+        "array_indentation": true,
+        "array_syntax": {
+            "syntax": "short"
+        },
+        "binary_operator_spaces": {
+            "default": "single_space",
+            "operators": {
+                "=>": "single_space"
+            }
+        },
+        "blank_line_after_namespace": true,
+        "blank_line_after_opening_tag": true,
+        "blank_line_before_statement": {
+            "statements": [
+                "return"
+            ]
+        },
+        "braces": {
+            "allow_single_line_closure": false,
+            "position_after_anonymous_constructs": "same",
+            "position_after_control_structures": "same",
+            "position_after_functions_and_oop_constructs": "next"
+        },
+        "cast_spaces": {
+            "space": "single"
+        },
+        "class_attributes_separation": {
+            "elements": {
+                "method": "one"
+            }
+        },
+        "concat_space": {
+            "spacing": "one"
+        },
+        "declare_equal_normalize": {
+            "space": "single"
+        },
+        "elseif": true,
+        "encoding": true,
+        "indentation_type": true,
+        "no_useless_else": true,
+        "ordered_imports": {
+            "sort_algorithm": "alpha"
+        },
+        "phpdoc_align": {
+            "tags": [
+                "param",
+                "return",
+                "throws",
+                "type",
+                "var"
+            ]
+        },
+        "phpdoc_indent": true,
+        "phpdoc_inline_tag_normalizer": true,
+        "phpdoc_no_access": true,
+        "phpdoc_no_package": true,
+        "phpdoc_order": true,
+        "phpdoc_scalar": true,
+        "phpdoc_separation": true,
+        "phpdoc_trim": true,
+        "single_quote": true,
+        "ternary_operator_spaces": true,
+        "trailing_comma_in_multiline": {
+            "elements": [
+                "arrays"
+            ]
+        },
+        "trim_array_spaces": true,
+        "whitespace_after_comma_in_array": true
+    }
+}
