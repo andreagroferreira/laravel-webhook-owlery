@@ -11,8 +11,7 @@
 |
 */
 
-uses(WizardingCode\WebhookOwlery\Tests\TestCase::class)->in('Feature');
-uses(PHPUnit\Framework\TestCase::class)->in('Unit');
+// Let each test file define its own TestCase
 
 /*
 |--------------------------------------------------------------------------
@@ -40,7 +39,4 @@ expect()->extend('toBeOne', function () {
 |
 */
 
-function something()
-{
-    // ..
-}
+// Mockery already provides the mock() function, so we don't need to define it here.

@@ -4,11 +4,14 @@ namespace WizardingCode\WebhookOwlery\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Route;
+use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use Orchestra\Testbench\TestCase as Orchestra;
 use WizardingCode\WebhookOwlery\WebhookOwleryServiceProvider;
 
 class TestCase extends Orchestra
 {
+    use MockeryPHPUnitIntegration;
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -25,6 +28,25 @@ class TestCase extends Orchestra
         ];
     }
 
+    protected function resolveApplicationConfiguration($app)
+    {
+        parent::resolveApplicationConfiguration($app);
+
+        // Force config to be loaded
+        $app['config']->set('webhook-owlery.routes.enabled', true);
+        $app['config']->set('webhook-owlery.routes.prefix', 'api');
+        $app['config']->set('webhook-owlery.routes.middleware', ['api']);
+
+        // Add required config items
+        $app['config']->set('webhook-owlery.signing.default', 'hmac');
+        $app['config']->set('webhook-owlery.signing.hmac.algorithm', 'sha256');
+        $app['config']->set('webhook-owlery.signing.hmac.header', 'X-Signature');
+
+        $app['config']->set('webhook-owlery.circuit_breaker.enabled', true);
+        $app['config']->set('webhook-owlery.circuit_breaker.threshold', 5);
+        $app['config']->set('webhook-owlery.circuit_breaker.recovery_time', 60);
+    }
+
     public function getEnvironmentSetUp($app)
     {
         config()->set('database.default', 'testing');
@@ -32,6 +54,7 @@ class TestCase extends Orchestra
             'driver' => 'sqlite',
             'database' => ':memory:',
             'prefix' => '',
+            'foreign_key_constraints' => true,
         ]);
 
         $migration = include __DIR__ . '/../database/migrations/create_webhook_endpoints_table.php';

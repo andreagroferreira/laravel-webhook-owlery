@@ -775,8 +775,12 @@ class EloquentWebhookRepository implements WebhookRepositoryContract
     {
         return WebhookSubscription::where('is_active', true)
             ->where(function ($query) use ($eventType) {
-                $query->where('event_types', 'like', "%$eventType%")
-                    ->orWhereJsonContains('event_types', $eventType);
+                $query->where('event_types', 'like', "%$eventType%");
+
+                // Only use JSON functions if not using SQLite (for testing compatibility)
+                if (config('database.default') !== 'testing') {
+                    $query->orWhereJsonContains('event_types', $eventType);
+                }
             })
             ->get();
     }

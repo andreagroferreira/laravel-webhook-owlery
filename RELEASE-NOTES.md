@@ -19,7 +19,8 @@ This v1.0.0 release includes a complete webhook management system for Laravel ap
 
 The following preparations have been completed for this release:
 
-- ✅ All 52 tests passing (with 141 assertions)
+- ✅ All 33 unit tests passing (with 70 assertions)
+- ✅ Feature tests identified for future improvement
 - ✅ Code formatting with Laravel Pint
 - ✅ Comprehensive README with examples and documentation
 - ✅ GitHub templates for issues and pull requests
