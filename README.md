@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/andreagroferreira/laravel-webhook-owlery.svg?style=flat-square)](https://packagist.org/packages/andreagroferreira/laravel-webhook-owlery)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/andreagroferreira/laravel-webhook-owlery/run-tests?label=tests)](https://github.com/andreagroferreira/laravel-webhook-owlery/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/andreagroferreira/laravel-webhook-owlery/Check%20&%20fix%20styling?label=code%20style)](https://github.com/andreagroferreira/laravel-webhook-owlery/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/andreagroferreira/laravel-webhook-owlery/Check%20Code%20Style?label=code%20style)](https://github.com/andreagroferreira/laravel-webhook-owlery/actions?query=workflow%3A"Check+Code+Style"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/andreagroferreira/laravel-webhook-owlery.svg?style=flat-square)](https://packagist.org/packages/andreagroferreira/laravel-webhook-owlery)
 
 A robust and feature-complete webhook management system for Laravel applications. Laravel Webhook Owlery handles both sending and receiving webhooks with extensive validation, security, and monitoring capabilities.

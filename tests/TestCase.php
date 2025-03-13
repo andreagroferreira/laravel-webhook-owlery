@@ -19,21 +19,21 @@ class TestCase extends Orchestra
         Factory::guessFactoryNamesUsing(
             fn (string $modelName) => 'WizardingCode\\WebhookOwlery\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
         );
-        
+
         // Ensure repository binding is set correctly
         $this->app->bind(
             \WizardingCode\WebhookOwlery\Contracts\WebhookRepositoryContract::class,
             \WizardingCode\WebhookOwlery\Repositories\EloquentWebhookRepository::class
         );
-        
+
         // Ensure circuit breaker binding is set correctly
         $this->app->bind(
             \WizardingCode\WebhookOwlery\Contracts\CircuitBreakerContract::class,
             \WizardingCode\WebhookOwlery\Repositories\RedisCircuitBreaker::class
         );
-        
+
         // Properly setup event dispatcher
-        if (!$this->app->bound('events')) {
+        if (! $this->app->bound('events')) {
             $this->app->singleton('events', function ($app) {
                 return new \Illuminate\Events\Dispatcher($app);
             });

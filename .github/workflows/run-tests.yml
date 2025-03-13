@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [main]
 
+# Add permissions needed for CI
+permissions:
+  contents: read
+
 jobs:
   test:
     runs-on: ${{ matrix.os }}
