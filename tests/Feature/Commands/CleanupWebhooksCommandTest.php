@@ -4,6 +4,9 @@ use Carbon\Carbon;
 use WizardingCode\WebhookOwlery\Facades\WebhookRepository;
 use WizardingCode\WebhookOwlery\Models\WebhookDelivery;
 use WizardingCode\WebhookOwlery\Models\WebhookEvent;
+use WizardingCode\WebhookOwlery\Tests\TestCase;
+
+uses(TestCase::class);
 
 beforeEach(function () {
     $endpoint = WebhookRepository::createEndpoint([

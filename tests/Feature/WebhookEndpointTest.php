@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Event;
 use WizardingCode\WebhookOwlery\Events\WebhookReceived;
 use WizardingCode\WebhookOwlery\Events\WebhookValidated;
 use WizardingCode\WebhookOwlery\Facades\WebhookRepository;
+use WizardingCode\WebhookOwlery\Tests\TestCase;
+
+uses(TestCase::class);
 
 beforeEach(function () {
     Event::fake();

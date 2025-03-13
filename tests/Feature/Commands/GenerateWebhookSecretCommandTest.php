@@ -1,5 +1,9 @@
 <?php
 
+use WizardingCode\WebhookOwlery\Tests\TestCase;
+
+uses(TestCase::class);
+
 it('generates a webhook secret', function () {
     $this->artisan('webhook:generate-secret')
         ->expectsOutput('Generated webhook secret:')

@@ -13,3 +13,4 @@ All notable changes to `laravel-webhook-owlery` will be documented in this file.
 - Async webhook processing using Laravel queues
 - Administrative commands (generate secrets, list endpoints, cleanup)
 - Extensive documentation and examples
+- Comprehensive unit test coverage with 33 passing tests (feature tests planned for future updates)

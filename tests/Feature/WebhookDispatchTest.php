@@ -6,6 +6,9 @@ use WizardingCode\WebhookOwlery\Events\WebhookDispatched;
 use WizardingCode\WebhookOwlery\Events\WebhookDispatching;
 use WizardingCode\WebhookOwlery\Facades\Owlery;
 use WizardingCode\WebhookOwlery\Facades\WebhookRepository;
+use WizardingCode\WebhookOwlery\Tests\TestCase;
+
+uses(TestCase::class);
 
 beforeEach(function () {
     Event::fake();

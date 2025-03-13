@@ -43,6 +43,9 @@ Use this checklist to ensure everything is ready for the Laravel Webhook Owlery 
 - [x] Badges in README pointing to correct repositories
 - [x] Composer scripts for testing, linting, and formatting
 - [x] Skipped tests documented with clear reasoning
+- [x] All unit tests passing (33 tests with 70 assertions)
+- [x] Feature tests identified for enhancement in future updates
+- [x] Added notes to README about feature tests status
 
 ## Release Process
 

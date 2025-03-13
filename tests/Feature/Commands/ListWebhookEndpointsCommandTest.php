@@ -1,6 +1,9 @@
 <?php
 
 use WizardingCode\WebhookOwlery\Facades\WebhookRepository;
+use WizardingCode\WebhookOwlery\Tests\TestCase;
+
+uses(TestCase::class);
 
 beforeEach(function () {
     // Create some test endpoints
