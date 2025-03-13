@@ -11,6 +11,12 @@
 |
 */
 
+// Unit Tests group
+uses()->group('unit')->in('Unit');
+
+// Feature Tests group (currently disabled in phpunit.xml)
+uses()->group('feature')->in('Feature');
+
 // Let each test file define its own TestCase
 
 /*

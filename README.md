@@ -1128,10 +1128,16 @@ $dispatcher->announceFeature('Advanced Analytics', [
 
 ## 🧪 Testing
 
-The package ships with a comprehensive test suite using Pest PHP. All tests are now passing!
+The package ships with a comprehensive test suite using Pest PHP.
+
+### Running Unit Tests
+
+To run the unit tests (all currently passing):
 
 ```bash
 composer test
+# or specifically
+vendor/bin/pest --group=unit
 ```
 
 Output:
@@ -1149,6 +1155,10 @@ Tests:  4 skipped, 33 passed (70 assertions)
 ```
 
 > **Note:** Feature tests are currently being refined and will be available in a future release. The core functionality is fully tested with unit tests.
+
+### GitHub Actions CI
+
+The CI pipeline is configured to run all unit tests against multiple PHP and Laravel versions. Feature tests are excluded from the CI pipeline until they are fully stabilized in a future release.
 
 > **Note:** The skipped tests for JWT validation will automatically run if you install the Firebase JWT library with `composer require firebase/php-jwt`. This is expected behavior as the JWT functionality is considered optional.
 

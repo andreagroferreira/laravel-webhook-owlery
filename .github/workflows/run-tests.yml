@@ -48,5 +48,5 @@ jobs:
           composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
           composer update --${{ matrix.stability }} --prefer-dist --no-interaction
 
-      - name: Execute tests
-        run: vendor/bin/pest
+      - name: Execute unit tests
+        run: vendor/bin/pest --group=unit

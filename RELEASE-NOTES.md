@@ -24,13 +24,14 @@ The following preparations have been completed for this release:
 - ✅ Code formatting with Laravel Pint
 - ✅ Comprehensive README with examples and documentation
 - ✅ GitHub templates for issues and pull requests
-- ✅ GitHub workflows for CI/CD
+- ✅ GitHub workflows configured to run only unit tests for CI/CD
 - ✅ PHPStan configuration for static analysis
 - ✅ Security policy
 - ✅ Contribution guidelines
 - ✅ MIT License
 - ✅ Changelog
 - ✅ Release process documentation
+- ✅ Composer scripts for targeted testing
 
 ## Next Steps for Release
 
@@ -46,9 +47,18 @@ To complete the release process:
 
 Here are some areas we plan to focus on for future releases:
 
+- Enhanced feature tests for comprehensive testing
 - More provider-specific validators for popular services
 - Dashboard integration for monitoring webhook activities
 - More comprehensive examples for real-world use cases
 - Advanced retry strategies for webhook delivery
+
+## Note on Testing
+
+The package includes both unit and feature tests:
+
+- Unit tests (33 tests with 70 assertions) all pass and are included in the CI pipeline
+- Feature tests need additional work and are currently excluded from the CI pipeline
+- To run only unit tests: `vendor/bin/pest --group=unit`
 
 Thank you for your interest in Laravel Webhook Owlery! We're excited to see how you use it in your applications.
