@@ -44,7 +44,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "PortkeyAuthServiceProvider"
+                "WizardingCode\\WebhookOwlery\\WebhookOwleryServiceProvider"
             ],
             "aliases": {
                 "Owlery": "WizardingCode\\WebhookOwlery\\Facades\\Owlery",
