@@ -175,6 +175,20 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Migration Configuration
+    |--------------------------------------------------------------------------
+    |
+    | Configure how migrations are handled by the package.
+    |
+    */
+    'migrations' => [
+        // Whether migrations should be auto-loaded from the package
+        // If false, you'll need to publish migrations to run them
+        'auto_load' => false,
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Storage Configuration
     |--------------------------------------------------------------------------
     |
