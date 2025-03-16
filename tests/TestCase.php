@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Route;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use Orchestra\Testbench\TestCase as Orchestra;
-use WizardingCode\WebhookOwlery\WebhookOwleryServiceProvider;
+use WizardingCode\WebhookOwlery\PortkeyAuthServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -43,7 +43,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            WebhookOwleryServiceProvider::class,
+            PortkeyAuthServiceProvider::class,
         ];
     }
 
