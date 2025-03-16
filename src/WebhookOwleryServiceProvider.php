@@ -96,8 +96,11 @@ class WebhookOwleryServiceProvider extends ServiceProvider
             __DIR__ . '/../database/migrations/' => database_path('migrations'),
         ], 'migrations');
 
-        // Load migrations
-        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        // Load migrations directly from package if auto-loading is enabled
+        // Use config to determine if migrations should be auto-loaded
+        if (config('webhook-owlery.migrations.auto_load', false)) {
+            $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        }
 
         // Register commands
         if ($this->app->runningInConsole()) {

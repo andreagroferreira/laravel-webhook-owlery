@@ -76,16 +76,16 @@ class TestCase extends Orchestra
             'foreign_key_constraints' => true,
         ]);
 
-        $migration = include __DIR__ . '/../database/migrations/create_webhook_endpoints_table.php';
+        $migration = include __DIR__ . '/../database/migrations/2025_03_16_111216_create_webhook_endpoints_table.php';
         $migration->up();
 
-        $migration = include __DIR__ . '/../database/migrations/create_webhook_subscriptions_table.php';
+        $migration = include __DIR__ . '/../database/migrations/2025_03_16_111219_create_webhook_subscriptions_table.php';
         $migration->up();
 
-        $migration = include __DIR__ . '/../database/migrations/create_webhook_events_table.php';
+        $migration = include __DIR__ . '/../database/migrations/2025_03_16_111217_create_webhook_events_table.php';
         $migration->up();
 
-        $migration = include __DIR__ . '/../database/migrations/create_webhook_deliveries_table.php';
+        $migration = include __DIR__ . '/../database/migrations/2025_03_16_111218_create_webhook_deliveries_table.php';
         $migration->up();
 
         // Register webhook routes for testing
