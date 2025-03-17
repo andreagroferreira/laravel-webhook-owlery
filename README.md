@@ -1451,3 +1451,5 @@ The package is ready for a v1.0.0 production release! All of the following have 
 - ✅ MIT License
 - ✅ Package infrastructure (composer.json, .gitattributes, etc.)
 - ⏳ Feature tests to be enhanced in future updates
+
+  <iframe src="https://github.com/sponsors/andreagroferreira/button" title="Sponsor andreagroferreira" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
